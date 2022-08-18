@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
+
 namespace CollectionsMasterConsoleUI
 {
     class Program
@@ -115,11 +116,16 @@ namespace CollectionsMasterConsoleUI
             Console.WriteLine("------------------");
 
             //TODO: Convert the list to an array and store that into a variable
-
+            int[] newArray = myList.ToArray();
+            Console.WriteLine($"This list is now an array: Length of {newArray.Length}");
 
             //TODO: Clear the list
-
-
+            Console.WriteLine($"Old array: {newArray.Length}");
+            Console.WriteLine("");
+            Array.Clear(newArray, 0, newArray.Length);
+            Console.WriteLine($"New empty array: ");
+            foreach (int i in newArray)
+                Console.WriteLine(i);
             #endregion
         }
 
